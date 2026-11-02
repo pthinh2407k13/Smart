@@ -1,0 +1,57 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    color: #F8FAFC;
+    background-color: #070D1E;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Custom scrollbar in dark navy with cyan thumb */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #070D1E;
+}
+::-webkit-scrollbar-thumb {
+  background: #0E7490;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #06B6D4;
+}
+
+.student-management-container,
+.student-management-container *,
+.class-management-container,
+.class-management-container *,
+.parent-info-screen,
+.parent-info-screen * {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif !important;
+}
+
+.student-management-container,
+.student-management-container input,
+.student-management-container select,
+.student-management-container button,
+.student-management-container table,
+.student-management-container th,
+.student-management-container td,
+.parent-info-screen,
+.parent-info-screen input,
+.parent-info-screen select,
+.parent-info-screen button,
+.parent-info-screen table,
+.parent-info-screen th,
+.parent-info-screen td,
+.class-management-container,
+.class-management-container input,
+.class-management-container select,
+.class-management-container button {
+  font-size: 13px !important;
+}

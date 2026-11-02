@@ -1,0 +1,47 @@
+{
+  "entities": {
+    "Question": {
+      "title": "Question",
+      "description": "Question bank item",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "code": { "type": "string" },
+        "questionText": { "type": "string", "maxLength": 2000 },
+        "subject": { "type": "string" },
+        "gradeLevel": { "type": "number" },
+        "topic": { "type": "string" },
+        "type": { "type": "string" },
+        "difficulty": { "type": "string" },
+        "status": { "type": "string" },
+        "points": { "type": "number" },
+        "createdAt": { "type": "string" },
+        "createdBy": { "type": "string" }
+      },
+      "required": ["id", "code", "questionText", "subject", "gradeLevel"]
+    },
+    "ClassRoom": {
+      "title": "ClassRoom",
+      "description": "Classroom details",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string", "maxLength": 100 },
+        "subject": { "type": "string" },
+        "grade": { "type": "number" },
+        "studentCount": { "type": "number" }
+      },
+      "required": ["id", "name", "subject"]
+    }
+  },
+  "firestore": {
+    "/questions/{questionId}": {
+      "schema": { "$ref": "#/entities/Question" },
+      "description": "Question bank collection"
+    },
+    "/classes/{classId}": {
+      "schema": { "$ref": "#/entities/ClassRoom" },
+      "description": "Classes collection"
+    }
+  }
+}
